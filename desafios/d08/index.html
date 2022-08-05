@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Desconto</title>
+    <style>
+        button {
+            width: 150px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calcular Desconto</h1>
+    <button onclick="clicou()">Desconto de 10%</button>
+    <div id="res">Clique no botão acima para iniciar.</div>
+    <script>
+        function clicou() {
+            let prod = prompt('Qual é o produto que você está comprando?')
+            let preco = Number(prompt(`Qual é o preço de ${prod}?`))
+            let res = document.getElementById('res')
+            res.innerHTML = `<h2>Calculando desconto de 10% para smart watch</h2>
+            <p>O preço original era R$${preco}.</p>
+            <p>Você acaba de ganhar R${preco*0.1} de desconto (-10%).</p>
+            <p>No fim, você vai pagar R$${preco*0.9} no produto ${prod}.</p>`
+        }
+    </script>
+</body>
+</html>
